@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style></style>
+  <title>UniDSA - Menu Lateral</title>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div class="uni-ml" id="uni-ml" jsname="">
+    <div class="uni-ml-logo" onclick="UniDSAMenuLateralOnClickLogo()">
+      <img id="uni-ml-logo-imagem-empresa" src="https://cdn-icons-png.flaticon.com/512/339/339786.png" alt="">
+      <span id="uni-ml-logo-nome-empresa">UniDSA - Unigui</span>
+    </div>
+
+    <div class="uni-ml-pesquisa">
+      <div class="uni-ml-item-icone">
+        <i id="uni-ml-item-search-icon" class="fas fa-search" onclick="UniDSAMenuLateralOnClickIconSearch(event)"></i> 
+      </div>
+      <input type="search" id="uni-ml-pesquisar" autocomplete="off" placeholder="Pesquisa..."  onkeydown="UniDSAMenuLateralOnKeyDownSearch(event)" onsearch="UniDSAMenuLateralOnKeyDownSearch(event)">  
+    </div>  
+
+    <div class="uni-ml-scroll-menu">
+      <span class="uni-ml-titulo-menu">Menu</span>
+
+      <ul>
+        <li style="order:0;"  id="uni-ml-item-menu-DSA" onclick="UniDSAMenuLateralOnClickMenu()" > 
+          <a href="" id="uni-ml-item-menu-link" title="">
+            <div class="uni-ml-item-icone">
+              <i id="uni-ml-item-icon-DSA" class="fas fa-layer-group" ></i>
+            </div>
+            <span id="uni-ml-item-texto-DSA">Geral</span>
+            <div class="uni-ml-item-menu-notif" id="uni-ml-item-menu-notif-DSA" onclick="UniDSAMenuLateralOnClickNotificationMenu(event)">0</div>            
+          </a>
+        </li>
+
+        <li style="order:1;">
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <i id="uni-ml-item-icon-y" class="fas fa-cart-plus"></i>
+            </div>
+            <span>Pedidos</span>
+          </a>
+        </li>
+
+        <li style="order:2;">
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <i class="fas fa-user-tag"></i>
+            </div>
+            <span>Clientes</span>
+          </a>
+        </li>
+
+        <li style="order:3;">
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+            <span>Comissões</span>
+          </a>
+        </li>
+
+        <li style="order:4;">
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <span>Relatórios</span>
+          </a>
+        </li>
+
+        <div style="order:5;" class="uni-ml-item-menu-divisor"></div>
+
+        <li style="order:6;">
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <span>Configurações</span>
+          </a>
+        </li>
+
+        <li style="order:7;">
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <i class="fas fa-headset"></i>
+            </div>
+            <span>Suporte</span>
+          </a>
+        </li>        
+      </ul>
+
+      <span class="uni-ml-titulo-menu">Grupos</span>   
+
+      <ul>
+        <li>
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <div class="uni-ml-item-menu-status" style="background-color: #19b859"></div>
+            </div>
+            <span>Opção 1</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </li>     
+
+        <li>
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <div class="uni-ml-item-menu-status" style="background-color: #094ae6;"></div>
+            </div>
+            <span>Opção 2</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </li>    
+        
+        <li>
+          <a href="#">
+            <div class="uni-ml-item-icone">
+              <div class="uni-ml-item-menu-status" style="background-color: #f49f00;"></div>
+            </div>
+            <span>Opção 3</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </li>            
+      </ul>      
+    </div>
+    
+    <div class="uni-ml-config-usuario">
+      <div class="uni-ml-config-usuario-tema">
+        <div class="uni-ml-config-usuario-tema-1" option="T1" onClick="UniDSAMenuLateralOnClickTema(event)">
+          <i class="far fa-sun"></i>
+          <span id="uni-ml-tema-esquerda">Claro</span>
+        </div>
+        <div class="uni-ml-config-usuario-tema-2" option="T2" onClick="UniDSAMenuLateralOnClickTema(event)">
+          <i class="far fa-moon"></i>
+          <span id="uni-ml-tema-direita">Escuro</span>        
+        </div>
+      </div>
+
+      <div class="uni-ml-perfil">
+        <img id="uni-ml-perfil-imagem" src="img/perfil.jpg" onClick="UniDSAMenuLateralOnClickProfile()" />
+        <div class="uni-ml-perfil-desc" onClick="UniDSAMenuLateralOnClickProfile()">
+          <span id="uni-ml-perfil-nome">Dêividy Alcântara</span>
+          <span id="uni-ml-perfil-email">deividy@dominio.com</span>
+        </div>
+        <i class="fas fa-sign-out-alt" onClick="UniDSAMenuLateralOnClickLogoff()"></i>
+      </div>
+    </div> 
+  </div>
+</body>
+</html>
